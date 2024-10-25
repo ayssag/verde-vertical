@@ -5,7 +5,168 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verde Vertical</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #e0f7fa;
+            color: #004d00;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        /* Estilo para modo mobile */
+        body.mobile {
+            font-size: 0.8em; /* Ajustar tamanho da fonte para dispositivos móveis */
+            padding: 10px; /* Um pouco de padding extra em mobile */
+        }
+        
+        
+        body.dark {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        .info {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            background-image: url('https://i.pinimg.com/originals/76/49/7c/76497cd75f62cffe3ce5c4c30d0c89ef.gif');
+        }
+        
+        header.dark {
+            background-color: #005020;
+        }
+        
+        .header img {
+            width: 25rem;
+        }
+        
+        .header .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        
+        .header h1 {
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .h1 {
+            width: 100%;
+        }
+        
+        .header p {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .header .buttons {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .tema, .modo {
+            margin: 20px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #007A33;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .tema:hover, .modo:hover {
+            background-color: #005020;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 20px;
+            align-items: center;
+        }
+        
+        .btn-info {
+            width: 18rem;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        .btn-info:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        .benefit-detail{
+            display: none; /* Começa escondida */
+            border-radius: 10px;
+            margin: 20px;
+            background-color: #d4f8d4;
+            color: #004d00;
+        }
+        
+        
+        .benefit-detail.active {
+            display: flex; 
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;/* Exibe a seção ativa */
+        }
+        
+        .container p, h2, h3{
+            margin: 10px;
+            text-align: center;
+        }
+        
+        
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #007A33;
+            color: white;
+            position: relative;
+            bottom: 0;
+        }
+        
+        footer.dark {
+            background-color: #005020;
+        }
+        
+    </style>
 </head>
 <body>
     <div class="header">
