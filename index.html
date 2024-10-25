@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Vertical</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+            <div class="info">
+                <img src="./images/logo.png">
+                <h1>Verde Vertical</h1>
+                <p>Preservar para prosperar</p>
+            </div>
+            <div class="buttons">
+                <button class="toggle-theme" onclick="toggleTheme()">Mudar Tema</button>
+                <button class="toggle-mode" onclick="toggleMode()">Mudar para Modo Mobile/Desktop</button>
+            </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h2>Benefícios do Jardim Vertical</h2>
+            <p>Os jardins verticais têm muitos benefícios, incluindo:</p>
+            <ul>
+                <li><a href="#" class="btn-info" onclick="showDetail('qualidade-ar')">Melhora da qualidade do ar</a></li>
+                <li><a href="#" class="btn-info" onclick="showDetail('isolamento-acustico')">Isolamento acústico</a></li>
+                <li><a href="#" class="btn-info" onclick="showDetail('reducao-temperatura')">Redução da temperatura ambiente</a></li>
+                <li><a href="#" class="btn-info" onclick="showDetail('beleza-estetica')">Beleza estética e valorização do espaço</a></li>
+                <li><a href="#" class="btn-info" onclick="showDetail('reducao-estresse')">Redução do estresse</a></li>
+            </ul>
+
+            <div id="qualidade-ar" class="benefit-detail light">
+                <h3>Qualidade do Ar</h3>
+                <p>Jardins verticais ajudam a purificar o ar, absorvendo poluentes e liberando oxigênio!</p>
+            </div>
+
+            <div id="isolamento-acustico" class="benefit-detail light">
+                <h3>Isolamento Acústico</h3>
+                <p>Os jardins verticais podem reduzir a poluição sonora absorvendo e refletindo o som!</p>
+            </div>
+
+            <div id="reducao-temperatura" class="benefit-detail light">
+                <h3>Redução de Temperatura</h3>
+                <p>Plantas ajudam a resfriar o ambiente, reduzindo a temperatura nas áreas urbanas!</p>
+            </div>
+
+            <div id="beleza-estetica" class="benefit-detail light">
+                <h3>Beleza Estética</h3>
+                <p>Um jardim vertical embeleza qualquer espaço, tornando-o mais agradável visualmente!</p>
+            </div>
+
+            <div id="reducao-estresse" class="benefit-detail light">
+                <h3>Redução do Estresse</h3>
+                <p>Estar próximo à natureza mostrou reduzir os níveis de estresse e promover bem-estar!</p>
+            </div>
+
+            <img src="https://www.comofazeremcasa.net/wp-content/uploads/2019/09/Hortas-verticais-com-canos-PVC-14.jpg" alt="Jardim Vertical">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Projeto Jardim Verde Vertical (Alunos do Sesi de Taguatinga).</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const header = document.querySelector('header');
+            const footer = document.querySelector('footer');
+
+            body.classList.toggle('dark');
+            header.classList.toggle('dark');
+            footer.classList.toggle('dark');
+            
+            // Alternar classes das seções de benefícios
+            const details = document.querySelectorAll('.benefit-detail');
+            details.forEach(detail => {
+                detail.classList.toggle('dark');
+                detail.classList.toggle('light');
+            });
+        }
+
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle('mobile'); // Alterna entre modo mobile e desktop
+        }
+
+        function showDetail(benefitId) {
+            // Esconde todas as seções de detalhes
+            const details = document.querySelectorAll('.benefit-detail');
+            details.forEach(detail => detail.classList.remove('active'));
+            
+            // Mostra apenas a seção clicada
+            const activeDetail = document.getElementById(benefitId);
+            if (activeDetail) {
+                activeDetail.classList.add('active');
+                // Rolagem suave para a seção
+                activeDetail.scrollIntoView({behavior: "smooth"});
+            }
+        }
+    </script>
+</body>
+</html>
