@@ -165,6 +165,47 @@
         footer.dark {
             background-color: #005020;
         }
+
+        #projeto {
+            border-radius: 10px;
+            margin: 20px;
+            background-color: #d4f8d4;
+            color: #004d00;
+        }
+
+        #projeto p {
+            text-align: justify;
+        }
+        
+        #tutorial {
+            display: none;
+            border-radius: 10px;
+            margin: 20px;
+            background-color: #d4f8d4;
+            width: 60vw;
+            color: #004d00;
+        }
+
+        #tutorial ul{
+            list-style-type: disc;
+        }
+
+        #tutorial p{
+            text-align: justify;
+        }
+
+        #tutorial img{
+            width: 50%
+        }
+
+        #tutorial .hidden {
+            display: none;
+        }
+
+        h3 {
+            text-align: left; 
+            margin: 20px;
+        }
         
     </style>
 </head>
@@ -182,48 +223,128 @@
     </div>
 
     <div class="container">
-        <h2>Benefícios do Jardim Vertical</h2>
-        <p>Os jardins verticais têm muitos benefícios, incluindo:</p>
-        <ul>
-            <li><a href="#qualidade-ar" class="btn-info" onclick="showDetail('qualidade-ar')">Melhora da qualidade do ar</a></li>
-            <li><a href="#isolamento-acustico" class="btn-info" onclick="showDetail('isolamento-acustico')">Isolamento acústico</a></li>
-            <li><a href="#reducao-temperatura" class="btn-info" onclick="showDetail('reducao-temperatura')">Redução da temperatura ambiente</a></li>
-            <li><a href="#beleza-estetica" class="btn-info" onclick="showDetail('beleza-estetica')">Beleza estética e valorização do espaço</a></li>
-            <li><a href="#reducao-estresse" class="btn-info" onclick="showDetail('reducao-estresse')">Redução do estresse</a></li>
-        </ul>
-
-        <div id="qualidade-ar" class="benefit-detail light">
-            <h3>Qualidade do Ar</h3>
-            <p>Jardins verticais ajudam a purificar o ar, absorvendo poluentes e liberando oxigênio!</p>
+        <div id="projeto"  class="container">
+            <h2>Sobre o projeto</h2>
+            <p>Este trabalho tem como objetivo mostrar os benefícios dos jardins verticais para Brasília, especialmente durante o período das queimadas que afetam o Cerrado. A ideia é mostrar como essa solução verde pode ajudar a melhorar a qualidade de vida na cidade, reduzindo o calor e purificando o ar em áreas muito urbanizadas. Para isso, vamos analisar fontes que falam sobre os benefícios dos jardins verticais e criar uma maquete. Esperamos que os resultados ajudem a conscientizar as pessoas sobre a importância de usar soluções sustentáveis para diminuir os efeitos das queimadas e melhorar o clima da cidade. Concluímos que usar jardins verticais em Brasília pode ajudar na sustentabilidade e na qualidade de vida, além de deixar a cidade mais bonita.</p>
         </div>
-
-        <div id="isolamento-acustico" class="benefit-detail light">
-            <h3>Isolamento Acústico</h3>
-            <p>Os jardins verticais podem reduzir a poluição sonora absorvendo e refletindo o som!</p>
+        <div id="beneficios" class="container">
+            <h2>Benefícios do Jardim Vertical</h2>
+            <p>Os jardins verticais têm muitos benefícios, incluindo:</p>
+            <ul>
+                <li><a href="#qualidade-ar" class="btn-info" onclick="showDetail('qualidade-ar')">Melhora da qualidade do ar</a></li>
+                <li><a href="#isolamento-acustico" class="btn-info" onclick="showDetail('isolamento-acustico')">Isolamento acústico</a></li>
+                <li><a href="#reducao-temperatura" class="btn-info" onclick="showDetail('reducao-temperatura')">Redução da temperatura ambiente</a></li>
+                <li><a href="#beleza-estetica" class="btn-info" onclick="showDetail('beleza-estetica')">Beleza estética e valorização do espaço</a></li>
+                <li><a href="#reducao-estresse" class="btn-info" onclick="showDetail('reducao-estresse')">Redução do estresse</a></li>
+            </ul>
+            <div id="qualidade-ar" class="benefit-detail light">
+                <h3>Qualidade do Ar</h3>
+                <p>Jardins verticais ajudam a purificar o ar, absorvendo poluentes e liberando oxigênio!</p>
+            </div>
+            <div id="isolamento-acustico" class="benefit-detail light">
+                <h3>Isolamento Acústico</h3>
+                <p>Os jardins verticais podem reduzir a poluição sonora absorvendo e refletindo o som!</p>
+            </div>
+            <div id="reducao-temperatura" class="benefit-detail light">
+                <h3>Redução de Temperatura</h3>
+                <p>Plantas ajudam a resfriar o ambiente, reduzindo a temperatura nas áreas urbanas!</p>
+            </div>
+            <div id="beleza-estetica" class="benefit-detail light">
+                <h3>Beleza Estética</h3>
+                <p>Um jardim vertical embeleza qualquer espaço, tornando-o mais agradável visualmente!</p>
+            </div>
+            <div id="reducao-estresse" class="benefit-detail light">
+                <h3>Redução do Estresse</h3>
+                <p>Estar próximo à natureza mostrou reduzir os níveis de estresse e promover bem-estar!</p>
+            </div>
+            <img src="https://www.comofazeremcasa.net/wp-content/uploads/2019/09/Hortas-verticais-com-canos-PVC-14.jpg" alt="Jardim Vertical">
         </div>
-
-        <div id="reducao-temperatura" class="benefit-detail light">
-            <h3>Redução de Temperatura</h3>
-            <p>Plantas ajudam a resfriar o ambiente, reduzindo a temperatura nas áreas urbanas!</p>
+        <button class="btn-info" onclick="toggleTutorial()">
+            Como fazer uma horta vertical
+        </button>
+        <div id="tutorial">
+            <div class="container">
+                <h2>Como fazer uma horta em casa</h2>
+                <img src="https://safraviva.com.br/wp-content/uploads/horta-vertical-de-garrafa-pet.jpg">
+                <h3>O que você precisa</h3>
+                <ul>
+                    <li>8 Garrafas PET (de refrigerante de 2 litros);</li>
+                    <li>Corda (5 metros);</li>
+                    <li>Mangueira pequena(2,5 metros);</li>
+                    <li>Pedaço de arame;</li>
+                    <li>Pedrinhas de qualquer tipo;</li>
+                    <li>Terra vegetal;</li>
+                    <li>Sementes ou mudas.</li>
+                    <li>Tesoura ou estilete;</li>
+                    <li>Agulha;</li>
+                    <li>Espeto de churrasco.</li>
+                </ul>
+            </div>
+            <h3>1. Faça os vasos</h3>
+            <div class="container">
+                <p>Primeiro, pegue 2 garrafas do mesmo tamanho, para facilitar o encaixe.
+                Depois, corte o fundo de uma delas com a tesoura ou com o estilete.
+                Na outra garrafa, faça um furo no fundo, para passar a mangueira. Para fazer esse furo, você pode  utilizar um espeto de churrasco.
+                Em seguida, junte as duas garrafas, encaixando-as.
+                Então corte com a tesoura ou com o estilete a abertura onde as plantas vão ficar (um retângulo em torno de 8 a 18 cm).
+                Por fim, faça 4 furinhos na parte de baixo do vaso (também com a tesoura) , perfurando o plástico das duas garrafas. Isso é importante para que a água das plantas possa escorrer.
+                E atenção! Repita o procedimento com mais 2 pares de garrafas (4 garrafas). Sendo assim, serão 3 vasos.</p>
+                <img src="https://safraviva.com.br/wp-content/uploads/garrafa-pet.jpg" alt="">
+            </div>
+           <h3>2. Faça o recipiente de água</h3>
+           <div class="container">
+               <p>
+                Repita o procedimento do passo 1, ou seja, corte o fundo de uma das garrafas e junte com a outra. Entretanto, não é necessário furar a segunda garrafa.
+                Também não é necessário fazer os 4 furinhos no recipiente de água.
+                Nesse caso, você vai precisar fazer uma abertura menor e colocar uma tampa.
+                Tenha em mente que o objetivo nesta etapa é que seja possível encher o recipiente com água e deixá-lo fechado. Essa medida vai evitar a entrada de mosquitos.
+                Para finalizar, antes de ir para o próximo passo, aproveite para pintar as garrafas. Isso não é obrigatório, mas deixa sua hortinha mais bonita e, claro, com a sua cara.
+               </p>
+           </div>
+           <h3>3. Coloque os vasos e o recipiente na posição vertical</h3>
+           <div class="container">
+               <p>
+                Quer saber como fazer a horta vertical propriamente dita? Então pegue a corda e amarre as duas pontas no lugar onde for deixar sua horta.
+                Primeiro, coloque o último vaso na parte de baixo da corda. Para isso, faça um nó perto da boca da garrafa. Entenda melhor na imagem abaixo:
+                Depois, faça o mesmo com o outro lado e, em seguida, repita com mais dois vasos acima.
+                Por último, coloque o recipiente de água com os mesmos nós, mas, dessa vez, com uma inclinação de 45°.
+               </p>
+               <img src="https://safraviva.com.br/wp-content/uploads/horta-com-garrafa-pet.jpg" alt="">
+           </div>
+           <h3>4. Coloque a mangueira</h3>
+           <div class="container">
+               <p>
+                Essa etapa é importante, pois nela você vai completar o sistema de irrigação.
+                Primeiro, pegue a tampa da garrafa do recipiente de água e faça um buraco com o espeto de churrasco nela.
+                Em seguida, com o auxílio de uma tesoura (ou estilete), vá aumentando o tamanho do buraco até que se torne possível passar a mangueira por dentro dela.
+                Mas atenção: a mangueira deve ficar bem apertada, de modo que não deixe sair água pelo buraco durante a utilização do sistema.
+                Então, coloque essa tampa no recipiente de água e vá passando a mangueira pelas garrafas (vasos), sempre de cima para baixo.
+                Depois de passar a mangueira em todos os recipientes, faça três furos bem pequenos com uma agulha em cada parte da mangueira que se encontre dentro da garrafa, (no total serão 9 furos).
+                Por que é importante fazer esses furos? Porque eles farão com que a água, por gotejamento, irrigue as plantas. Por isso, não faça nenhum furo na parte da mangueira que se encontra fora das garrafas.
+               </p>
+               <img src="https://safraviva.com.br/wp-content/uploads/horta-vertical-tipo-serpente.jpg" alt="">
+           </div>
+           <h3>5. Faça o plantio</h3>
+           <div class="container">
+               <p>
+                Antes de plantar, coloque uma camada de pedrinhas no fundo dos vasos. Essas pedras farão com que o excesso de água escorra pelos buraquinhos feitos nas garrafas.
+                Depois, coloque uma camada de terra de 3 dedos acima das pedrinhas.
+                Se você for plantar sementes, coloque-as um dedo abaixo da terra.
+                Mas, se for plantar mudas, abra buraquinhos na terra e coloque 1 ou, no máximo, 2 mudas por vaso. Esse espaço é importante para a ventilação entre as plantas.
+               </p>
+           </div>
+           <h3>6. Finalize o sistema de irrigação</h3>
+           <div class="container">
+               <p>
+                Peça ajuda para uma pessoa tampar a abertura de baixo da mangueira, enquanto você enche o recipiente de água, ou vice-versa.
+                Assim que a água percorrer o caminho até o fim da mangueira, feche o final dela, dobrando-a e colocando um arame bem forte.
+               </p>
+           </div>
         </div>
-
-        <div id="beleza-estetica" class="benefit-detail light">
-            <h3>Beleza Estética</h3>
-            <p>Um jardim vertical embeleza qualquer espaço, tornando-o mais agradável visualmente!</p>
-        </div>
-
-        <div id="reducao-estresse" class="benefit-detail light">
-            <h3>Redução do Estresse</h3>
-            <p>Estar próximo à natureza mostrou reduzir os níveis de estresse e promover bem-estar!</p>
-        </div>
-
-        <img src="https://www.comofazeremcasa.net/wp-content/uploads/2019/09/Hortas-verticais-com-canos-PVC-14.jpg" alt="Jardim Vertical">
     </div>
-
-    <footer>
-        <p class="footer-text">&copy; 2024 Projeto Jardim Verde Vertical (Alunos do Sesi de Taguatinga).</p>
-    </footer>
-
+        <footer>
+            <p class="footer-text">&copy; 2024 Projeto Jardim Verde Vertical (Alunos do Sesi de Taguatinga).</p>
+        </footer>
     <script>
         function toggleTheme() {
             const body = document.body;
@@ -232,6 +353,16 @@
             body.classList.toggle('dark');
             footer.classList.toggle('dark');
 
+        }
+
+        function toggleTutorial() {
+            var tutorial = document.getElementById('tutorial');
+            if (tutorial.style.display === "none"){
+                tutorial.style.display = "block";
+            }
+            else{
+                tutorial.style.display = "none";
+            }
         }
 
         function toggleMode() {
